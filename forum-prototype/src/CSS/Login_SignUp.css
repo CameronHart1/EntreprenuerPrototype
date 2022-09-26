@@ -2,7 +2,7 @@
     /* The image used */
     margin: 0%;
     padding: 0%;
-    background-image: url('../public/LoginBackground.jpg');
+    background-image: url('../../public/background-images/LoginBackground.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     height: 100vh;
