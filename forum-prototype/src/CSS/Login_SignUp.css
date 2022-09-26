@@ -10,7 +10,6 @@
 
 .LoginSignUpLabel { 
       /*Button format */
-    display: flex;
     flex-direction: row;
     align-items: center;
     padding: 18px 43px;
