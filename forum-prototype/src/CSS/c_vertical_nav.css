@@ -5,6 +5,7 @@
   padding-left: 40px;
   justify-items: left;
   text-align: left;
+  max-width: 11vw;
 }
 
 h1 {
@@ -17,35 +18,52 @@ h1 {
   color: #000000;
 }
 
-#NewsFeedsLabel{
-    font-size: 12px;
-    line-height: 16px;
+.SectionLabel {
+  font-size: 12px;
+  line-height: 16px;
 }
 
-.Divider{
-    margin-left: 40px;
-    margin-right: 40px;
-    height: 1px;
-    background: #E4E4E4;
+.Divider {
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 1px;
+  background: #e4e4e4;
 }
 
-.NewsFeedItem{
-    margin-right: 10px;
-    margin-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: left;
-    text-align: left;
-    gap:20px;
+.NewsFeedItem {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  gap: 20px;
 }
 
-.NewsFeedItem:hover{
-    background-color:#E6C6C6;
+.NewsFeedItem:hover {
+  background-color: #e6c6c6;
 }
 
-.selectedButt{
-    background-color:#E6C6C6;
+.selectedButt {
+  background-color: #e6c6c6;
 }
 
+.ProfileItem {
+  display: flex;
+  align-items: stretch;
+  line-height: 16px;
+  justify-content: space-between;
+  padding-right: 20px;
+  margin-top: 15px;
+}
+
+.ProfilePic {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+.ProfileItem p {
+  margin-top: 3px;
+}
