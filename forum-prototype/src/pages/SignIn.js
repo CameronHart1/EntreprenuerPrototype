@@ -8,8 +8,10 @@ export const SignIn = () => {
   return (
     // needs to be in a div
     <div className="background">
-      <div id="whatvevr the white box is gonna be">
-        {signtype == "signin"? <SignInInterior /> : <SignUpInterior />}
+      <div class='SignInUpBox'>
+        <div id="whatvevr the white box is gonna be">
+          {signtype == "signin"? <SignInInterior /> : <SignUpInterior />}
+        </div>
       </div>
     </div>
   );
@@ -19,7 +21,8 @@ const SignInInterior = () => {
   return (
     // needs to be in a div
     <div>
-      <h1>Sign In</h1>
+        <h1 class='LoginSignUpTitle'>Sign in</h1>
+        <button className='LoginSignUpLabel'>Sign In</button>
     </div>
   );
 };

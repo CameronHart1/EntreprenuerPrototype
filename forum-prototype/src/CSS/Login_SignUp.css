@@ -10,16 +10,16 @@
 
 .LoginSignUpLabel { 
       /*Button format */
-    flex-direction: row;
     align-items: center;
-    padding: 18px 43px;
-    gap: 10px;
+    justify-content: center;  
     background: #3F8CFF;
     border-radius: 16px;
+    margin: auto; 
     border: none;
     width: 364px;
     height: 56px;
     position: absolute;
+    bottom: 40px;
     cursor:pointer;
    
     /*Text format */
@@ -44,16 +44,15 @@
 .LoginSignUpLabel:hover {
     background-color: #1C84FF;
    }
-   
-.LoginSignUpLabel:disabled { 
-    cursor: not-allowed;
-    background: rgba(0, 0, 0, .08);
-    color: rgba(0, 0, 0, .3);
-   }
 
 .SignInUpBox {
     background: white;
     border-radius: 40px;
+    width: 464px;
+    height: 649px;
+    position: absolute;
+    right: 150px;
+    bottom: 15%;
 }
 
 .TextBox[type=text] {
@@ -65,8 +64,9 @@
 }
 
 .Heading {
-    width: 103px;
-    height: 16px;
+    position: absolute;
+    width: 131px;
+    height: 60px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -75,7 +75,7 @@
     color: #808191;
 }
 
-.LoginSignUpTitle {
+h1.LoginSignUpTitle {
     width: 131px;
     height: 60px;
     font-family: 'Poppins';
@@ -85,6 +85,9 @@
     line-height: 60px;
     letter-spacing: -1px;
     color: #11142D;
+    position: absolute;
+    left: 48px;
+    top: 35px;
 }
 
 .Title {
