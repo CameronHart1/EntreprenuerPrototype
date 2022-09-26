@@ -1,90 +1,66 @@
 import { useState } from "react";
-import { renderMatches } from "react-router-dom";
+import { renderMatches, useLocation, useNavigate } from "react-router-dom";
 import "../../CSS/c_vertical_nav.css";
+// storing this externally for neatness
+import { Following } from "../../DataObjects/Following";
+import { SidebarFeed, UnityGaming } from "../../DataObjects/SideBarArrays";
 
 export const VerticalNav = () => {
-  const [selected, setSelected] = useState("");
-
-  const changeSelection = (e, path) => {
-    setSelected(path);
-  };
-
-  const SidebarFeed = [
-    {
-      id: "newsfeed",
-      msg: "News Feed",
-      img: "\\icons\\SideNav\\Game.svg",
-      add: false,
-    },
-    {
-      id: "trending",
-      msg: "Trending",
-      img: "\\icons\\SideNav\\Trending.svg",
-      add: false,
-    },
-    {
-      id: "following",
-      msg: "Following",
-      img: "\\icons\\SideNav\\Profile.svg",
-      add: false,
-    },
-    {
-      id: "yourvideos",
-      msg: "Your Videos",
-      img: "\\icons\\SideNav\\Video.svg",
-      add: true,
-    },
-    {
-      id: "post",
-      msg: "Post",
-      img: "\\icons\\SideNav\\Document.svg",
-      add: true,
-    },
-  ];
-  const SidebarFollowing = [
-    { name: "Higgins Reyes", online: false },
-    { name: "Everett Porter", online: false },
-    { name: "Carrie Zamora", online: true },
-    { name: "Millie Hicks", online: false },
-    { name: "Susan Craig", online: false },
-    { name: "Charlotte Cain", online: false },
-    { name: "Christina Palmer", online: false },
-  ];
+  const nav = useNavigate();
 
   return (
     <div className="NavWrapper">
-      <h1>Kontrolia</h1>
-      <div id="NewsFeeds">
-        <p className="SectionLabel">News Feeds</p>
-        {SidebarFeed.map((i) => {
-          return (
-            <NfItem
-              imgSrc={i.img}
-              msg={i.msg}
-              selected={selected}
-              add={i.add}
-              name={i.id}
-              changeSelection={changeSelection}
-            />
-          );
-        })}
+      {/* top Content */}
+      <div>
+        <h1>Kontrolia</h1>
+        {/* News feeds ------------------------------ */}
+        <SideList nav={nav} id="NewsFeeds" msg="News Feeds" array={SidebarFeed}/>
+        <div className="Divider" />
+        {/* Following ------------------------------ */}
+        <div id="Following">
+          <p className="SectionLabel">Following</p>
+          {Following.map((i) => {
+            return <UserImage key={i.name} name={i.name} online={i.online} color={i.profileCol} />;
+          })}
+        </div>
+        <div className="Divider" />
+        {/* Unity Gaming ------------------------------ */}
+        <SideList nav={nav} id="UnityGaming" msg="unity Gaming" array={UnityGaming}/>
       </div>
-      <div className="Divider" />
-      <div id="Following">
-        <p className="SectionLabel">Following</p>
-        {SidebarFollowing.map((i) => {
-          return <UserImage name={i.name} online={i.online} />;
-        })}
-      </div>
-      <div className="Divider" />
-      <div id="UnityGaming">
-        
-      </div>
+      {/* Bottom content */}
+      <div></div>
     </div>
   );
 };
 
-const NfItem = (props) => {
+// Components --------------------------------------
+const SideList = (props) => {
+  const currentPath =  useLocation().pathname.substring(1);
+  const changeSelection = (e, path) => {
+    props.nav(`/${path}`);
+  };
+
+  return (
+    <div id={props.id}>
+      <p className="SectionLabel">{props.msg}</p>
+      {props.array.map((i) => {
+        return (
+          <SideBarItem
+            key={i.id}
+            imgSrc={i.img}
+            msg={i.msg}
+            add={i.add}
+            name={i.id}
+            selected={currentPath}
+            changeSelection={changeSelection}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+const SideBarItem = (props) => {
   return (
     <div
       id={props.name}
@@ -105,14 +81,12 @@ const NfItem = (props) => {
     </div>
   );
 };
-
+// -------
 const UserImage = (props) => {
-  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-
   return (
     <div className="ProfileItem">
       <div
-        style={{ backgroundColor: `#${randomColor}` }}
+        style={{ backgroundColor: props.color }}
         className="ProfilePic"
       />
       <p>{props.name}</p>
