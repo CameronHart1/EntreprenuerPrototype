@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Frame from "./pages/Frame";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
+import { SignIn } from "./pages/SignIn";
 // import MakePost from "./pages/MakePost";
 // import LoginPage from "./pages/Login";
 
@@ -48,6 +49,7 @@ const App = () => {
             <Route path="contact" element={<Contact />} /> */}
             <Route path="*" element={<NoPage />} />
           </Route>
+          <Route path="/signin" element={<SignIn/>}/>
         </Routes>
       </BrowserRouter>
     </div>
