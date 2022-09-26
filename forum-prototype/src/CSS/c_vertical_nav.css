@@ -16,3 +16,36 @@ h1 {
 
   color: #000000;
 }
+
+#NewsFeedsLabel{
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.Divider{
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 1px;
+    background: #E4E4E4;
+}
+
+.NewsFeedItem{
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    gap:20px;
+}
+
+.NewsFeedItem:hover{
+    background-color:#E6C6C6;
+}
+
+.selectedButt{
+    background-color:#E6C6C6;
+}
+

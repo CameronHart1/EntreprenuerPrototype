@@ -15,24 +15,24 @@ import NoPage from "./pages/NoPage";
 
 const App = () => {
     // const [, setData] = React.useState(null);
-    const [posts, setPosts] = React.useState([{}]);
-    const [accounts, setAccounts] = React.useState([{}]);
+    // const [posts, setPosts] = React.useState([{}]);
+    // const [accounts, setAccounts] = React.useState([{}]);
   
-    useEffect(() => {
-      // getting JSONs
-      fetch("/Posts.json")
-        .then((res) => res.json())
-        .then((Jdata) => {
-          setPosts(Jdata);
-          // console.log("Parsed Articles");
-        });
-      fetch("/Accounts.json")
-        .then((res) => res.json())
-        .then((Jdata) => {
-          setAccounts(Jdata);
-          // console.log("Parsed Tutorials");
-        });
-    }, []);
+    // useEffect(() => {
+    //   // getting JSONs
+    //   fetch("/Posts.json")
+    //     .then((res) => res.json())
+    //     .then((Jdata) => {
+    //       setPosts(Jdata);
+    //       // console.log("Parsed Articles");
+    //     });
+    //   fetch("/Accounts.json")
+    //     .then((res) => res.json())
+    //     .then((Jdata) => {
+    //       setAccounts(Jdata);
+    //       // console.log("Parsed Tutorials");
+    //     });
+    // }, []);
   return (
     <div className="App">
       <BrowserRouter>
