@@ -1,0 +1,78 @@
+.Blue-Button { 
+    /*Button format */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 43px;
+  gap: 10px;
+  background: #3F8CFF;
+  border-radius: 16px;
+  border: none;
+  width: 364px;
+  height: 56px;
+  position: absolute;
+  cursor:pointer;
+ 
+  /*Text format */
+  color: #FFFFFF;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  text-align: center;
+  display:table-cell;
+  vertical-align:middle;
+ }
+ 
+.Blue-Button:active {
+  background-color: #006AE8;
+ }
+ 
+.Blue-Button:hover {
+  background-color: #1C84FF;
+ }
+ 
+.Blue-Button:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+ }
+
+
+ .Menu-Button {
+    position: absolute;
+    width: 112px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #808191;
+    background-color: white;
+    border-radius: 32px;
+    cursor:pointer;
+    text-align: center;
+    display:table-cell;
+    vertical-align:middle;
+    border: none;
+ }
+
+ .Menu-Button:active {
+    background-color: #E6C6C6;
+   }
+
+ .Menu-Button:hover{
+    background-color: #E6C6C6;
+    color: white;
+ }
+
+ .Menu-Button:disabled { 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+   }
