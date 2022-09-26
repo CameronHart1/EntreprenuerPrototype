@@ -10,7 +10,8 @@ h1{
 
 p{
   font-family: 'Inter';
-  font-size: 40px;
+  font-size: 14px;
+  color: #808191;
 }
 
 .App-logo {
