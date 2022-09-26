@@ -1,7 +1,17 @@
-.FrameDiv{
+.HorizontalFrame{
+    min-width: 100vw;
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
-    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    gap: 0px;
+}
+
+.VerticalFrame{
+    flex: 8.5;
+    display: flex;
+    flex-grow: 8;
+    flex-direction: column;
+    justify-content: stretch;
     gap: 0px;
 }

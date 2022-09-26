@@ -6,6 +6,8 @@ import React from "react";
 
 import "../CSS/p_frame.css";
 
+import { SearchHeader } from "../Components/FrameBars/c_search_header";
+import { VerticalNav } from "../Components/FrameBars/c_vertical_nav";
 import { Outlet } from "react-router-dom";
 // import Layout from "./pages/Layout";
 // import Home from "./pages/Home";
@@ -15,9 +17,13 @@ import { Outlet } from "react-router-dom";
 
 const Frame = (props) => {
   return (
-    <div className="FrameDiv">
+    <div className="HorizontalFrame">
+      <VerticalNav />
       {/* <Header options={defaultSearch}></Header> */}
-      <Outlet />
+      <div className="VerticalFrame">
+        <SearchHeader />
+        <Outlet />
+      </div>
       {/* <Footer /> */}
     </div>
   );

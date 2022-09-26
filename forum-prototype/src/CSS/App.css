@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  background:  #FFFFFF;
+}
+
+h1{
+  font-family:'Poppins' ;
+  font-size: 40px;
+}
+
+p{
+  font-family: 'Inter';
+  font-size: 40px;
 }
 
 .App-logo {
@@ -26,13 +37,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

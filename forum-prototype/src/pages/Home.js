@@ -1,3 +1,5 @@
+import "../CSS/p_home.css"
+
 const Home = (props) => {
   const { posts } = props;
   const { accounts } = props;
