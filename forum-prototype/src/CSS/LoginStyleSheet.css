@@ -1,0 +1,53 @@
+.background {
+    /* The image used */
+    margin: 0%;
+    padding: 0%;
+    background-image: url('../public/LoginBackground.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 100vh;
+   }
+
+.SignIn-Button { 
+      /*Button format */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 43px;
+    gap: 10px;
+    background: #3F8CFF;
+    border-radius: 16px;
+    border: none;
+    width: 364px;
+    height: 56px;
+    position: absolute;
+    cursor:pointer;
+   
+    /*Text format */
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-align: center;
+    display:table-cell;
+    vertical-align:middle;
+   }
+   
+.SignIn-Button:active {
+    background-color: #006AE8;
+   }
+   
+.SignIn-Button:hover {
+    background-color: #1C84FF;
+   }
+   
+.SignIn-Button:disabled { 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+   }
