@@ -73,6 +73,7 @@ h1 {
 
 /* comp 3 */
 #JoinAd {
+  margin-top: 200px;
   position: relative;
   width: 216px;
   height: 366px;
@@ -145,7 +146,6 @@ h1 {
 #BottomControls {
   margin-top: 20px;
   height: 72px;
-  background: #ffffff;
   box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.05);
   display: flex;
 }

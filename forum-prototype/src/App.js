@@ -1,13 +1,11 @@
 
-
-
 import React, { useEffect } from "react";
 import "./CSS/App.css";
 
 // Routing stuff
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Frame from "./pages/Frame";
-import Home from "./pages/Home";
+import {NewsFeed} from "./pages/NewsFeed";
 import NoPage from "./pages/NoPage";
 import { SignIn } from "./pages/SignIn";
 // import MakePost from "./pages/MakePost";
@@ -41,8 +39,9 @@ const App = () => {
           <Route path="/" element={<Frame/>}>
             <Route
               index
-              element={<Home/>}
+             element={<Navigate to="/newsfeed"/>}
             />
+            <Route path="newsfeed" element={<NewsFeed/>}/>
             {/* <Route path="/makepost" element={<MakePost />} /> */}
             {/* <Route path="/login/:SignType" element={<LoginPage />} /> */}
             {/* <Route path="blogs" element={<Blogs />} />
