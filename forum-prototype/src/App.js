@@ -48,7 +48,7 @@ const App = () => {
             <Route path="contact" element={<Contact />} /> */}
             <Route path="*" element={<NoPage />} />
           </Route>
-          <Route path="/signin" element={<SignIn/>}/>
+          <Route path="/account/:signtype" element={<SignIn/>}/>
         </Routes>
       </BrowserRouter>
     </div>
