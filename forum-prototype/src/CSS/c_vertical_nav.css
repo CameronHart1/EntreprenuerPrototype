@@ -1,11 +1,10 @@
 .NavWrapper {
-  flex: 1.5;
   background: rgba(0, 0, 0, 0.0001);
   box-shadow: inset -1px 0px 0px #e4e4e4;
   padding-left: 40px;
   justify-items: left;
   text-align: left;
-  max-width: 220px;
+  width: 220px;
 
   display: flex;
   flex-direction: column;
@@ -70,4 +69,83 @@ h1 {
 }
 .ProfileItem p {
   margin-top: 3px;
+}
+
+/* comp 3 */
+#JoinAd {
+  position: relative;
+  width: 216px;
+  height: 366px;
+  margin-left: -20px;
+}
+
+#AdClose {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#AdText {
+  position: absolute;
+  height: 108px;
+  left: 24px;
+  right: 24px;
+  bottom: 140px;
+}
+
+#AdText h1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  font-size: 24px;
+
+  color: #ffffff;
+}
+
+#AdText p {
+  position: absolute;
+  left: 0px;
+  top: 76px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #ffffff;
+}
+
+#AdButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 43px;
+  gap: 10px;
+
+  position: absolute;
+  height: 56px;
+  left: 33.5px;
+  right: 33.5px;
+  bottom: 40px;
+  /* Color/Primary/PRIMARY */
+
+  background: #6c5dd3;
+  border-radius: 16px;
+}
+#AdButton p {
+  text-align: center;
+  color: #ffffff;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+
+/* comp 4 */
+
+#BottomControls {
+  margin-top: 20px;
+  height: 72px;
+  background: #ffffff;
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
 }

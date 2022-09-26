@@ -14,28 +14,48 @@ export const VerticalNav = () => {
       <div>
         <h1>Kontrolia</h1>
         {/* News feeds ------------------------------ */}
-        <SideList nav={nav} id="NewsFeeds" msg="News Feeds" array={SidebarFeed}/>
+        <SideList
+          nav={nav}
+          id="NewsFeeds"
+          msg="News Feeds"
+          array={SidebarFeed}
+        />
         <div className="Divider" />
         {/* Following ------------------------------ */}
         <div id="Following">
           <p className="SectionLabel">Following</p>
           {Following.map((i) => {
-            return <UserImage key={i.name} name={i.name} online={i.online} color={i.profileCol} />;
+            return (
+              <UserImage
+                key={i.name}
+                name={i.name}
+                online={i.online}
+                color={i.profileCol}
+              />
+            );
           })}
         </div>
         <div className="Divider" />
         {/* Unity Gaming ------------------------------ */}
-        <SideList nav={nav} id="UnityGaming" msg="unity Gaming" array={UnityGaming}/>
+        <SideList
+          nav={nav}
+          id="UnityGaming"
+          msg="unity Gaming"
+          array={UnityGaming}
+        />
       </div>
       {/* Bottom content */}
-      <div></div>
+      <div>
+        <JoinAd />
+        <div id="BottomControls"></div>
+      </div>
     </div>
   );
 };
 
 // Components --------------------------------------
 const SideList = (props) => {
-  const currentPath =  useLocation().pathname.substring(1);
+  const currentPath = useLocation().pathname.substring(1);
   const changeSelection = (e, path) => {
     props.nav(`/${path}`);
   };
@@ -59,7 +79,7 @@ const SideList = (props) => {
     </div>
   );
 };
-
+// -------
 const SideBarItem = (props) => {
   return (
     <div
@@ -85,10 +105,7 @@ const SideBarItem = (props) => {
 const UserImage = (props) => {
   return (
     <div className="ProfileItem">
-      <div
-        style={{ backgroundColor: props.color }}
-        className="ProfilePic"
-      />
+      <div style={{ backgroundColor: props.color }} className="ProfilePic" />
       <p>{props.name}</p>
       <img
         src={
@@ -97,6 +114,25 @@ const UserImage = (props) => {
             : `${process.env.PUBLIC_URL}\\icons\\notification-small.svg`
         }
       />
+    </div>
+  );
+};
+// --------------------------------
+const JoinAd = (props) => {
+  return (
+    <div id="JoinAd">
+      <img
+        id="AdClose"
+        src={`${process.env.PUBLIC_URL}\\icons\\shadowCross.svg`}
+      />
+      <div id="AdText">
+        <h1>Join Us</h1>
+        <p> Discover the best anywhere.</p>
+      </div>
+      <div id="AdButton">
+        <p>Join Now</p>
+      </div>
+      <img src={`${process.env.PUBLIC_URL}\\images\\Flatened_Lol_Img.png`} />
     </div>
   );
 };

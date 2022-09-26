@@ -1,4 +1,7 @@
-.SearchWrapper{
-    width: 100%;
-    box-shadow: inset 0px -1px 0px #E4E4E4;
+.SearchWrapper {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: inset 0px -1px 0px #e4e4e4;
+  position: sticky;
+  top: 0;
 }
