@@ -1,0 +1,202 @@
+#VideoUploadWrapper {
+  display: flex;
+  margin-left: 5vw;
+  margin-right: 2vw;
+  gap: 60px;
+}
+
+#VideoUploadMain {
+  position: relative;
+  flex-grow: 1;
+}
+
+#VideoUploadRight {
+  position: relative;
+  width: 186px;
+}
+
+/* Shared classes */
+.EntryTitle {
+  /* headline/h2 - 48 */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 72px;
+  /* identical to box height */
+  letter-spacing: -1px;
+  /* Text/Active */
+  color: #11142d;
+}
+
+.ThinBox {
+  padding: 0px 20px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+}
+
+#VideoPreview{
+  position: absolute;
+  overflow: visible;
+  z-index: 1;
+  object-fit: cover;
+  left:0%;
+  right: 0%;
+  top:0%;
+  bottom: 0%;
+}
+
+/* Title */
+#VideoUploadTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 72px;
+  /* identical to box height */
+  letter-spacing: -1px;
+  text-align: left;
+  margin-left: 2vw;
+  /* Text/Active */
+  color: #11142d;
+  margin-bottom: 10vh;
+}
+
+/* Content */
+#TextInput {
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+/* Input Box */
+.inputfile-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  outline: none;
+  height: 450px;
+}
+
+/* #file-name{
+  font-family: 'Inter';
+} */
+
+.inputfile {
+  display: none;
+}
+
+.file-box {
+  display: inline-block;
+  box-sizing: border-box;
+  color: #11142d;
+}
+
+.file-button {
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 60%;
+  bottom: 30%;
+  display: flex;
+  outline: none;
+  border: none;
+
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 60% */
+
+  color: #ffffff;
+
+  background: #3f8cff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.file-button:hover {
+  background-color: #1c84ff;
+}
+
+#UploadTitle {
+  position: absolute;
+  height: 48px;
+  left: 0%;
+  right: 0%;
+  top: calc(50% - 48px / 2 - 52.5px);
+
+  /* headline/h4 - 32 */
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: -0.5px;
+
+  /* Text/Active */
+
+  color: #11142d;
+}
+
+#UploadText {
+  position: absolute;
+  height: 19px;
+  left: 4.07%;
+  right: 7.89%;
+  top: calc(50% - 19px / 2 - 14px);
+
+  /* title - 16 */
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  /* Color/Dark - Grey - Neutral/DEACTIVE */
+
+  color: #808191;
+}
+
+/* draggable stuff  */
+.VideoUploadArea.drag-active {
+  background-color: #ffffff;
+}
+#drag-file-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* ------------------- */
+#PostButton {
+  right: 0%;
+  width: 130px;
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 32px;
+}

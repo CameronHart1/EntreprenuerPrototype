@@ -18,7 +18,7 @@ export const SidebarFeed = [
       add: false,
     },
     {
-      id: "yourvideos",
+      id: "video/upload",
       msg: "Your Videos",
       img: "\\icons\\SideNav\\Video.svg",
       add: true,

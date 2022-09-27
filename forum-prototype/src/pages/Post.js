@@ -83,20 +83,21 @@ const ImageComp = (props) => {
   return (
     <div>
       <h1 className="EntryTitle">Insert images</h1>
-      <div className="inputfile-box RoundedDiv ThinBox">
+      <div className="inputfile-box-post RoundedDiv ThinBox">
         <input
           type="file"
-          id="ImageInput"
+          id="ImageInput-post"
+          name="img"
           defaultValue={props.default}
-          class="inputfile"
+          className="inputfile"
           accept="image/*"
           onChange={uploadFile}
         />
-        <label for="ImageInput">
-          <span id="file-name" class="file-box">
+        <label htmlFor="ImageInput">
+          <span id="file-name-post" className="file-box-post">
             {fileName}
           </span>
-          <span class="file-button">
+          <span className="file-button-post">
             <i aria-hidden="true"></i>
             Open browser
           </span>
@@ -136,7 +137,7 @@ const TagComp = (props) => {
         type="text"
         name="tags"
         className="RoundedDiv ThinBox"
-        placeholder='At least 3 tags, seperate with:" ",#'
+        placeholder='Seperate Tags with:" ",#'
         // using regex to split hashtags and filtertring out any empty values
         onChange={props.handleTextChange}
       />

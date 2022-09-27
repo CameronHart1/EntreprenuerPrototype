@@ -8,29 +8,10 @@ import { NewsFeed } from "./pages/NewsFeed";
 import NoPage from "./pages/NoPage";
 import { SignIn } from "./pages/SignIn";
 import PostPage from "./pages/Post";
-// import MakePost from "./pages/MakePost";
-// import LoginPage from "./pages/Login";
+import UploadVideoPage from "./pages/videoupload";
+
 
 const App = () => {
-  // const [, setData] = React.useState(null);
-  // const [posts, setPosts] = React.useState([{}]);
-  // const [accounts, setAccounts] = React.useState([{}]);
-
-  // useEffect(() => {
-  //   // getting JSONs
-  //   fetch("/Posts.json")
-  //     .then((res) => res.json())
-  //     .then((Jdata) => {
-  //       setPosts(Jdata);
-  //       // console.log("Parsed Articles");
-  //     });
-  //   fetch("/Accounts.json")
-  //     .then((res) => res.json())
-  //     .then((Jdata) => {
-  //       setAccounts(Jdata);
-  //       // console.log("Parsed Tutorials");
-  //     });
-  // }, []);
   return (
     <div className="App">
       <BrowserRouter>
@@ -39,10 +20,7 @@ const App = () => {
             <Route index element={<Navigate to="/newsfeed" />} />
             <Route path="newsfeed" element={<NewsFeed />} />
             <Route path="post" element={<PostPage />} />
-            {/* <Route path="/makepost" element={<MakePost />} /> */}
-            {/* <Route path="/login/:SignType" element={<LoginPage />} /> */}
-            {/* <Route path="blogs" element={<Blogs />} />
-            <Route path="contact" element={<Contact />} /> */}
+            <Route path="video/upload" element={<UploadVideoPage/>}/>
             <Route path="*" element={<NoPage />} />
           </Route>
           {/* <Route path="*" element={<NoPage />} /> */}

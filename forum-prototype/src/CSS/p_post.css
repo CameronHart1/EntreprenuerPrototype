@@ -16,11 +16,6 @@
   line-height: 18px;
 }
 
-.RoundedDiv {
-  background: rgba(228, 228, 228, 0.4978);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 32px;
-}
 .ThinBox {
   padding: 0px 20px;
   width: 100%;
@@ -58,10 +53,10 @@
 }
 
 /* Input Box */
-.inputfile-box {
+.inputfile-box-post {
   position: relative;
   display: flex;
-    align-items: center;
+  align-items: center;
   justify-content:left;
   outline: none;
 }
@@ -70,7 +65,7 @@
   font-family: 'Inter';
 } */
 
-.inputfile {
+.inputfile-post {
   display: none;
 }
 
@@ -79,13 +74,13 @@
   width: 100%;
 }
 
-.file-box {
+.file-box-post {
   display: inline-block;
   box-sizing: border-box;
   color: #11142d;
 }
 
-.file-button {
+.file-button-post {
   position: absolute;
   left: 80%;
   right: 5px;
