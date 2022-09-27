@@ -11,6 +11,7 @@ import PostPage from "./pages/Post";
 import UploadVideoPage from "./pages/videoupload";
 import ChatPage from "./pages/chat";
 import { UserContext } from "./context/user.context";
+import SettingsPage from "./pages/Settings";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -24,7 +25,11 @@ const App = () => {
             <Route index element={<Navigate to={MainRedir} />} />
             <Route path="newsfeed" element={<NewsFeed />} />
             <Route path="post" element={<PostPage />} />
+            {/* settings */}
+            <Route path="settings" element={<SettingsPage/>}/>
+            <Route path="settings/:tab" element={<SettingsPage/>}/>
             <Route path="video/upload" element={<UploadVideoPage />} />
+            {/* chat */}
             <Route path="chat" element={<ChatPage />} />
             <Route path="chat/:chatname" element={<ChatPage />} />
             <Route path="*" element={<NoPage />} />

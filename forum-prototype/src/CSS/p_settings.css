@@ -1,0 +1,37 @@
+#SettingsPageTabs {
+  width: 90%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin: 0% 5%;
+}
+
+.SettingsTabButton {
+  min-width: 120px;
+  width: 10%;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+.SettingsTabButton p {
+  color: #000000;
+}
+
+.SettingsTabButton.SelectedNavButt p {
+  color: #ffffff;
+}
+
+.SettingsTabButton.SelectedNavButt {
+  border: none;
+}
+
+#ProfileTabWrapper {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SignOutButton{
+padding: 10px 20px;
+}
