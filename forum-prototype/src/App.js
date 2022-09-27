@@ -9,7 +9,7 @@ import NoPage from "./pages/NoPage";
 import { SignIn } from "./pages/SignIn";
 import PostPage from "./pages/Post";
 import UploadVideoPage from "./pages/videoupload";
-
+import ChatPage from "./pages/chat";
 
 const App = () => {
   return (
@@ -20,7 +20,9 @@ const App = () => {
             <Route index element={<Navigate to="/newsfeed" />} />
             <Route path="newsfeed" element={<NewsFeed />} />
             <Route path="post" element={<PostPage />} />
-            <Route path="video/upload" element={<UploadVideoPage/>}/>
+            <Route path="video/upload" element={<UploadVideoPage />} />
+            <Route path="chat" element={<ChatPage />} />
+            <Route path="chat/:chatname" element={<ChatPage />} />
             <Route path="*" element={<NoPage />} />
           </Route>
           {/* <Route path="*" element={<NoPage />} /> */}

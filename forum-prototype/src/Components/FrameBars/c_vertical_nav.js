@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { renderMatches, useLocation, useNavigate } from "react-router-dom";
 import "../../CSS/c_vertical_nav.css";
+import "../../CSS/CommonElements.css";
 // storing this externally for neatness
 import { Following } from "../../DataObjects/Following";
 import { SidebarFeed, UnityGaming } from "../../DataObjects/SideBarArrays";
@@ -85,8 +86,8 @@ const SideBarItem = (props) => {
     <div
       id={props.name}
       className={
-        props.selected == props.name
-          ? "NewsFeedItem selectedButt"
+        props.selected.includes(props.name)
+          ? "NewsFeedItem SelectedNavButt"
           : "NewsFeedItem"
       }
       onClick={(e) => props.changeSelection(e, props.name)}

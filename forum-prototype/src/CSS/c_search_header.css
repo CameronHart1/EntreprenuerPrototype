@@ -9,7 +9,7 @@
   padding-left: 30px;
   padding-right: 30px;
   height: 8vh;
-  z-index: 1;
+  z-index: 10;
 }
 
 #LW_Wrapper {
