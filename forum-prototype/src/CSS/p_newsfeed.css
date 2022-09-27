@@ -1,0 +1,98 @@
+.headline {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    }
+
+.headline img {
+    width: 100%;
+}
+
+#text {
+    display: flex;
+    margin-left: 3vw;
+    margin-right: 10vw;
+}
+
+#text h1 {
+    width: 513px;
+    height: 96px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 25%;
+    text-align: left;
+}
+
+#text p {
+    width: 137px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    position: absolute;
+    top: 50%;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+#text p:before{
+    content: "";
+    display: block;
+    background: url("../../public/icons/Headline/game\ icon.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+
+}
+
+
+#text button {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 43px;
+    gap: 10px;
+
+    width: 131px;
+    height: 56px;
+
+    background: #6C5DD3;
+    border-radius: 16px;
+    border: none;
+
+    flex: none;
+    order: 1;
+    align-self: flex-start;
+    flex-grow: 0;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    position: absolute;
+    top: 62%;
+
+    cursor: pointer;
+}
