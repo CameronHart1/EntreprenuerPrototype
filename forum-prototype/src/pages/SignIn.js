@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../CSS/Login_SignUp.css";
 import "../CSS/form.css"
 
@@ -29,7 +29,7 @@ const SignInInterior = () => {
     <div>
         <h1>Sign in</h1>
         <form>
-          <label>New User?</label>
+          <Link to={"/account/signup"}><label className="ClickableLabel">New User?</label></Link>
           <label>Username or email:</label>
           <input
             type='text'
@@ -52,7 +52,7 @@ const SignUpInterior = () => {
     <div class="form">
       <h1>Sign up</h1>
         <form>
-          <label>Already a user?</label>
+        <Link to={"/account/signin"}><label className="ClickableLabel">Already a user?</label></Link>
           <label>Email:</label>
           <input
             type='text'
