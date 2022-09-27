@@ -42,13 +42,14 @@ export const SignIn = () => {
     }
     if (warnings > 0) return 0;
 
-    const id = UserCred.find(
-      (x) =>
-        (x.username == username || x.email == username) &&
-        x.password == password
-    ).id;
-
-    if (!id) {
+    var id = null;
+    try {
+      id = UserCred.find(
+        (x) =>
+          (x.username == username || x.email == username) &&
+          x.password == password
+      ).id;
+    } catch (e) {
       console.warn("User not found");
       return 0;
     }
