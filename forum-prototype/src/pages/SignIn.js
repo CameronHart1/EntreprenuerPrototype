@@ -53,7 +53,6 @@ export const SignIn = () => {
       console.warn("User not found");
       return 0;
     }
-
     setCurrentUser(UserProfiles[id]);
     nav("/");
   };
@@ -66,7 +65,7 @@ export const SignIn = () => {
       <div>
         <h1 className="Title">Kontrolia</h1>
       </div>
-      <div class="SignInUpBox">
+      <div className="SignInUpBox">
         <div className="form-box">
           <div id="whatvevr the white box is gonna be">
             {signtype == "signin" ? (

@@ -93,7 +93,7 @@ const ImageComp = (props) => {
           accept="image/*"
           onChange={uploadFile}
         />
-        <label htmlFor="ImageInput">
+        <label htmlFor="ImageInput-post">
           <span id="file-name-post" className="file-box-post">
             {fileName}
           </span>
