@@ -167,6 +167,7 @@ const MessageTyper = (props) => {
 
   const PostMessage = (e) => {
     props.addMessage(text, props.name);
+    setText("");
   };
 
   return (
@@ -198,13 +199,7 @@ const MessageTyper = (props) => {
             src={`${process.env.PUBLIC_URL}\\icons\\Chat\\AddIcon.svg`}
           />
         </div>
-        <textarea
-          id="MessageTextAreaIn"
-          rows="5"
-          cols="20"
-          defaultValue={text}
-          onChange={updateText}
-        ></textarea>
+        <TextAreaBox text={text} updateText={updateText} />
       </div>
       <button
         className="BlueButton"
@@ -214,6 +209,18 @@ const MessageTyper = (props) => {
         Reply Comment
       </button>
     </div>
+  );
+};
+
+const TextAreaBox = (props) => {
+  return (
+    <textarea
+      id="MessageTextAreaIn"
+      rows="5"
+      cols="20"
+      defaultValue={props.text}
+      onChange={props.updateText}
+    ></textarea>
   );
 };
 

@@ -1,5 +1,5 @@
 .HorizontalFrame{
-    min-width: 100vw;
+    min-width: 99vw;
     display: flex;
     min-height: 1800px;
     align-items: stretch;
